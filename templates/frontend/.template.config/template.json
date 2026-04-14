@@ -11,10 +11,11 @@
     "framework": {
       "type": "parameter",
       "datatype": "choice",
-      "choices": [{"choice":"react"},{"choice":"angular"},{"choice":"nextjs"}],
-      "defaultValue": "react"
+      "choices": [{ "choice": "react" }, { "choice": "angular" }, { "choice": "nextjs" }],
+      "defaultValue": "react",
+      "replaces": "__FRONTEND_FRAMEWORK__"
     }
   },
   "sources": [{ "source": "content", "target": "./" }],
-  "primaryOutputs": [{"path":"README.md"}]
+  "primaryOutputs": [{ "path": "README.md" }]
 }

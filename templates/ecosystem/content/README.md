@@ -4,13 +4,13 @@ Generated with `dotnet new ecosystem`.
 
 ## Selected Options
 
-- Services: `services`
-- Architecture: `architecture`
-- Database: `db`
-- Frontend: `frontend`
-- Infrastructure: `infra`
-- Gateway: `gateway`
-- Auth: `auth`
+- Services: `__SERVICES__`
+- Architecture: `__ARCHITECTURE__`
+- Database: `__DB__`
+- Frontend: `__FRONTEND__`
+- Infrastructure: `__INFRA__`
+- Gateway: `__GATEWAY__`
+- Auth: `__AUTH__`
 
 ## Generation Flow
 

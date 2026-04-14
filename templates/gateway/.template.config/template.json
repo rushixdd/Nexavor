@@ -11,14 +11,16 @@
     "gateway": {
       "type": "parameter",
       "datatype": "choice",
-      "choices": [{"choice":"yarp"},{"choice":"ocelot"}],
-      "defaultValue": "yarp"
+      "choices": [{ "choice": "yarp" }, { "choice": "ocelot" }],
+      "defaultValue": "yarp",
+      "replaces": "__GATEWAY_PROVIDER__"
     },
     "auth": {
       "type": "parameter",
       "datatype": "choice",
-      "choices": [{"choice":"jwt"},{"choice":"identity"}],
-      "defaultValue": "jwt"
+      "choices": [{ "choice": "jwt" }, { "choice": "identity" }],
+      "defaultValue": "jwt",
+      "replaces": "__AUTH_MODE__"
     }
   },
   "sources": [{ "source": "content", "target": "./" }]

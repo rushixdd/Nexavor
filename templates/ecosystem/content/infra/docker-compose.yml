@@ -2,18 +2,18 @@ version: "3.9"
 
 services:
   gateway:
-    image: ecosystemname/gateway:dev
+    image: EcosystemName/gateway:dev
     ports:
       - "8080:8080"
 
   user-service:
-    image: ecosystemname/user-service:dev
+    image: EcosystemName/user-service:dev
 
   order-service:
-    image: ecosystemname/order-service:dev
+    image: EcosystemName/order-service:dev
 
   payment-service:
-    image: ecosystemname/payment-service:dev
+    image: EcosystemName/payment-service:dev
 
   notification-service:
-    image: ecosystemname/notification-service:dev
+    image: EcosystemName/notification-service:dev

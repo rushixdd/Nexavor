@@ -12,50 +12,57 @@
       "type": "parameter",
       "datatype": "string",
       "defaultValue": "user,order,payment,notification",
-      "description": "Comma-separated service names"
+      "description": "Comma-separated service names",
+      "replaces": "__SERVICES__"
     },
     "architecture": {
       "type": "parameter",
       "datatype": "choice",
-      "choices": [{"choice":"clean"},{"choice":"minimal"}],
+      "choices": [{ "choice": "clean" }, { "choice": "minimal" }],
       "defaultValue": "clean",
-      "description": "Service architecture style"
+      "description": "Service architecture style",
+      "replaces": "__ARCHITECTURE__"
     },
     "db": {
       "type": "parameter",
       "datatype": "choice",
-      "choices": [{"choice":"sqlserver"},{"choice":"postgres"}],
+      "choices": [{ "choice": "sqlserver" }, { "choice": "postgres" }],
       "defaultValue": "postgres",
-      "description": "Primary database flavor"
+      "description": "Primary database flavor",
+      "replaces": "__DB__"
     },
     "frontend": {
       "type": "parameter",
       "datatype": "choice",
       "choices": [
-        {"choice":"react"},
-        {"choice":"angular"},
-        {"choice":"nextjs"},
-        {"choice":"none"}
+        { "choice": "react" },
+        { "choice": "angular" },
+        { "choice": "nextjs" },
+        { "choice": "none" }
       ],
-      "defaultValue": "react"
+      "defaultValue": "react",
+      "replaces": "__FRONTEND__"
     },
     "infra": {
       "type": "parameter",
       "datatype": "string",
       "defaultValue": "docker,k8s,monitoring,logging",
-      "description": "Comma-separated infra features"
+      "description": "Comma-separated infra features",
+      "replaces": "__INFRA__"
     },
     "gateway": {
       "type": "parameter",
       "datatype": "choice",
-      "choices": [{"choice":"yarp"},{"choice":"ocelot"}],
-      "defaultValue": "yarp"
+      "choices": [{ "choice": "yarp" }, { "choice": "ocelot" }],
+      "defaultValue": "yarp",
+      "replaces": "__GATEWAY__"
     },
     "auth": {
       "type": "parameter",
       "datatype": "choice",
-      "choices": [{"choice":"jwt"},{"choice":"identity"}],
-      "defaultValue": "jwt"
+      "choices": [{ "choice": "jwt" }, { "choice": "identity" }],
+      "defaultValue": "jwt",
+      "replaces": "__AUTH__"
     },
     "skipRootSolution": {
       "type": "parameter",
@@ -80,21 +87,9 @@
       ]
     }
   ],
-  "postActions": [
-    {
-      "condition": "(!skipRootSolution)",
-      "description": "Create root solution placeholder",
-      "manualInstructions": [
-        {
-          "text": "Run 'dotnet sln EcosystemName.sln add backend/MyApp.Backend.sln' after generating service projects."
-        }
-      ],
-      "continueOnError": true
-    }
-  ],
   "primaryOutputs": [
-    {"path": "README.md"},
-    {"path": "backend/MyApp.Backend.sln"},
-    {"path": "infra/docker-compose.yml"}
+    { "path": "README.md" },
+    { "path": "backend/EcosystemName.Backend.sln" },
+    { "path": "infra/docker-compose.yml" }
   ]
 }

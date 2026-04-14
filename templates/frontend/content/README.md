@@ -1,6 +1,6 @@
 # FrontendName
 
-Frontend scaffold generated with framework option: `framework`.
+Frontend scaffold generated with framework option: `__FRONTEND_FRAMEWORK__`.
 
 ## Next Steps
 

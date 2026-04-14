@@ -23,7 +23,7 @@ Each template includes a `.template.config/template.json` plus scaffold content 
 
 ## Local Usage
 
-Install templates from this repo root:
+Install templates from the repository root (recommended):
 
 ```bash
 dotnet new install ./templates/ecosystem
@@ -31,6 +31,8 @@ dotnet new install ./templates/microservice
 dotnet new install ./templates/gateway
 dotnet new install ./templates/frontend
 ```
+
+If your working directory is already `templates/`, install using `./ecosystem`, `./microservice`, etc.
 
 Generate an ecosystem:
 
