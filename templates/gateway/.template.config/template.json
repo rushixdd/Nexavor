@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Nexavor",
+  "classifications": ["Gateway", "API"],
+  "identity": "Nexavor.Templates.Gateway",
+  "name": "API Gateway (YARP/Ocelot)",
+  "shortName": "gateway",
+  "sourceName": "GatewayName",
+  "preferNameDirectory": true,
+  "symbols": {
+    "gateway": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [{"choice":"yarp"},{"choice":"ocelot"}],
+      "defaultValue": "yarp"
+    },
+    "auth": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [{"choice":"jwt"},{"choice":"identity"}],
+      "defaultValue": "jwt"
+    }
+  },
+  "sources": [{ "source": "content", "target": "./" }]
+}

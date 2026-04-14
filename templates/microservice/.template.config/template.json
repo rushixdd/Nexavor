@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Nexavor",
+  "classifications": ["Microservice", "Clean Architecture"],
+  "identity": "Nexavor.Templates.Microservice",
+  "name": "Clean Architecture Microservice",
+  "shortName": "microservice",
+  "sourceName": "ServiceName",
+  "preferNameDirectory": true,
+  "symbols": {
+    "db": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [{"choice":"sqlserver"},{"choice":"postgres"}],
+      "defaultValue": "postgres"
+    },
+    "auth": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [{"choice":"jwt"},{"choice":"identity"}],
+      "defaultValue": "jwt"
+    }
+  },
+  "sources": [{ "source": "content", "target": "./" }],
+  "primaryOutputs": [
+    {"path": "ServiceName.sln"},
+    {"path": "src/API/Program.cs"}
+  ]
+}

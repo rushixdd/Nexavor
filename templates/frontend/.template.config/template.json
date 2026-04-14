@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Nexavor",
+  "classifications": ["Frontend", "SPA"],
+  "identity": "Nexavor.Templates.Frontend",
+  "name": "Frontend App (React/Angular/Next.js)",
+  "shortName": "frontend",
+  "sourceName": "FrontendName",
+  "preferNameDirectory": true,
+  "symbols": {
+    "framework": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [{"choice":"react"},{"choice":"angular"},{"choice":"nextjs"}],
+      "defaultValue": "react"
+    }
+  },
+  "sources": [{ "source": "content", "target": "./" }],
+  "primaryOutputs": [{"path":"README.md"}]
+}
