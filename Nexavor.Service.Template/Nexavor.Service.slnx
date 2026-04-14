@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Nexavor.Service.API/Nexavor.Service.API.csproj" />
+  <Project Path="Nexavor.Service.Application/Nexavor.Service.Application.csproj" />
+  <Project Path="Nexavor.Service.Domain/Nexavor.Service.Domain.csproj" />
+  <Project Path="Nexavor.Service.Infrastructure/Nexavor.Service.Infrastructure.csproj" />
+</Solution>
